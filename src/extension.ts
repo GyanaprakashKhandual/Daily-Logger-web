@@ -20,7 +20,7 @@ export function activate(context: vscode.ExtensionContext) {
       const validSteps = getValidCucumberSteps(selectedLines);
 
       if (validSteps.length === 0) {
-        vscode.window.showWarningMessage("⚠️ No valid Cucumber steps found in the selection.");
+        vscode.window.showWarningMessage("No valid Cucumber steps found in the selection.");
         return;
       }
 
@@ -32,7 +32,7 @@ export function activate(context: vscode.ExtensionContext) {
       const validSteps = getValidCucumberSteps(lines);
 
       if (validSteps.length === 0) {
-        vscode.window.showWarningMessage("⚠️ No valid Cucumber steps found in the document.");
+        vscode.window.showWarningMessage("No valid Cucumber steps found in the document.");
         return;
       }
 
@@ -41,7 +41,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     // Copy to clipboard
     await vscode.env.clipboard.writeText(stepDefinitions);
-    vscode.window.showInformationMessage("✅ Step Definition(s) Copied!");
+    vscode.window.showInformationMessage("Step Definition(s) Copied!");
   });
 
   context.subscriptions.push(disposable);
