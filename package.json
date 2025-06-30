@@ -3,7 +3,7 @@
   "displayName": "Selenium-Cucumber",
   "publisher": "gyanaprakashkhandual",
   "description": "This will generate the step-definition code for selenium java from raw cucumber code",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.98.0"
   },
