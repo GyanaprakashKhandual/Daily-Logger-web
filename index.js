@@ -6,6 +6,8 @@ const path = require('path');
 const connectDB = require('./configs/db.config');
 
 const authRoutes = require('./routes/user.route');
+const projectRoutes = require('./routes/project.route');
+const workRoutes = require('./routes/work.route');
 dotenv.config();
 
 connectDB();
@@ -24,6 +26,8 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/auth', authRoutes);
+app.use('/api/project', projectRoutes);
+app.use('/api/work', workRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
