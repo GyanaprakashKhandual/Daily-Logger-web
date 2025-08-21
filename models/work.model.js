@@ -35,6 +35,12 @@ const workSchema = new mongoose.Schema({
     hours: {
         type: String
     },
+    githubLink: {
+        type: String
+    },
+    reportLink: {
+        type: String
+    }
 }, {timestamps: true});
 
 const Work = mongoose.model('Work', workSchema);
