@@ -10,13 +10,21 @@ const projectRoutes = require('./routes/project.route');
 const workRoutes = require('./routes/work.route');
 dotenv.config();
 
-connectDB();
-
 
 
 
 const app = express();
 app.use(express.json());
+
+connectDB();
+
+app.use(cors({
+    origin: 'http://localhost:3000',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
+}));
+
+
 
 const PORT = process.env.PORT;
 app.use(express.static(path.join(__dirname, 'public')));
